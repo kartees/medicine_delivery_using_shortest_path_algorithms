@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DAA</title>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js">
+    </script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+<script type="text/javascript" src="js/login.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Rowdies&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ 
+    <br>
+       <center><section class="titl"  ><div class="container" style="width: auto;min-width: 400px">
+         <center><h1>LOGIN PAGE</h1></center>
+      <center>  <p style="font-size: 20px; color:#c4b82d;">For admin only!!</p>  </center>
+        </div></section></center><br><br>
+      <center><div class="card1"><br><br>
+        <div class="row">
+          <div class="col-sm-4">
+        <label style="padding-top:10px; margin-left: 2px;font-size: 25px; font-family: 'Grenze Gotisch', cursive;">Email: </label>
+      </div>
+      <div class="col-sm-8">
+        <input class="inputbox" style="color: black" type="email" placeholder="Enter email" id="email"><br>
+        </div>
+        <div class="col-sm-4">
+        <label style="padding-top:10px; margin-left: 2px;font-size: 25px; font-family: 'Grenze Gotisch', cursive;">Password: </label>
+      </div>
+      <div class="col-sm-8">
+        <input class="inputbox" type="password" id="password" placeholder="Enter password" style="color: black"><br><br>
+        </div><br><br><br><br>
+        <div class="col-sm-12">
+        <button class="border" type="submit" id="login" onclick="run()"><a style="color: white; font-family:'Rowdies', cursive; padding:10px 20px">Login</a></button>
+      </div>
+      </div>
+    </div></center>
+    </div>
+</body>
+</html>

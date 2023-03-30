@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>algorithm</title>
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="js/diji/Test/Scripts/jquery-3.4.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script> 
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Rowdies&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet">
+  <title>Medical Agency</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+   <style>
+	 	
+	 	td{
+	 		border-color: black;
+	 		border: 1px solid black;
+	 		margin:0;
+	 	}
+    body{
+    
+      background-color: #4d4d4d ;
+      background-position: center;
+      
+    }
+	 	#sp1{
+	 		visibility: hidden;
+	 	}
+	 	#sp2{
+	 		visibility: hidden;
+	 	}
+	 	#sp3{
+	 		visibility: hidden;
+	 	}
+	 	#sp4{
+	 		visibility: hidden;
+	 	}
+	 	#sp5{
+	 		visibility: hidden;
+	 	}
+	 	#sp6{
+	 		visibility: hidden;
+	 	}
+	 	#sp8{
+	 		visibility: hidden;
+	 	}
+	 	#sp7{
+	 		visibility: hidden;
+	 	}
+	 	#sp9{
+	 		visibility: hidden;
+	 	}
+	 	#sp10{
+	 		visibility: hidden;
+	 	}
+	 	
+	 	#sp1.active{
+	 		visibility: visible;
+	 	}
+	 	#sp2.active{
+	 		visibility: visible;
+	 	}
+	 	#sp3.active{
+	 		visibility: visible;
+	 	}
+	 	#sp4.active{
+	 		visibility: visible;
+	 	}
+	 	#sp5.active{
+	 		visibility: visible;
+	 	}
+	 	#sp6.active{
+	 		visibility: visible;
+	 	}
+	 	#sp7.active{
+	 		visibility: visible;
+	 	}
+	 	#sp8.active{
+	 		visibility: visible;
+	 	}
+	 	#sp9.active{
+	 		visibility: visible;
+	 	}
+	 	#sp10.active{
+	 		visibility: visible;
+	 	}
+	 </style>
+</head>
+<body><br>
+	<center><section class="titl">
+  <center><h1>ALGORITHM</h1><h4 style="color: #e8e4e3; font-family:'Grenze Gotisch',cursive">Providing two algorithms for urgent delivery and overall delivery</h4></center></section></center><br><br>
+     <center><section class="tt"><H3>Orders</H3><br><br>
+     <center><table id="ord" cellspacing="20px" cellpadding="20px">
+  	<tr>
+  		<td>Name</td>
+  		<td>Address</td>
+  		<td>Phone NO</td>
+  		<td>Required Medicines</td>
+      <td>Bill</td>
+  	</tr>
+
+  </table></center></section></center>
+  <br><br>
+  <center><span style=" display:inline-block;"><p>Number of Places (Vertices)</p><input  type="number" id="ver" class="inputbox" style="color: black"></span>
+  <button type="submit" id="burr" class="border">Ok</button><br></center>
+  <br>
+   <center><div class="vert">
+	<center><span style="display: flex;"><h2 >A  -></h2><p style="padding-top:16px" >Our Shop</p></span></center>
+    <center><span style="display: flex;"><h2 >B  -></h2><p style="padding-top:16px"  id="v1"></p></span></center>
+    <center><span style="display: flex;"><h2 >C  -></h2><p style="padding-top:16px"  id="v2"></p></span></center>
+    <center><span style="display: flex;"><h2 >D  -></h2><p style="padding-top:16px"  id="v3"></p></span></center>
+    <center><span style="display: flex;"><h2 >E  -></h2><p style="padding-top:16px"  id="v4"></p></span></center>
+    <center><span style="display: flex;"><h2 >F  -></h2><p style="padding-top:16px"  id="v5"></p></span></center>
+    <center><span style="display: flex;"><h2 >G  -></h2><p style="padding-top:16px"  id="v6"></p></span></center>
+   </div></center>
+<br>
+<br>
+  <center><span style=" display:inline-block;"><p>Number of Routes (Edges)</p><input  type="number" id="edg" class="inputbox" style="color: black"></span>
+  <button type="submit" id="burr1" class="border">Ok</button></center><br><br>
+  
+
+
+  <center><div class="edging">
+  <span style="display: flex" id="sp1"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e11">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e12">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+<input type="number" id="ev1">
+<button type="submit" id="eb1" class="border">Done</button>
+  </span><br>
+  
+    <span style="display: flex" id="sp2"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e21">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e22">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev2">
+<button type="submit" id="eb2" class="border">Done</button>
+  </span><br>
+    <span style="display: flex" id="sp3"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e31">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e32">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev3">
+<button type="submit" id="eb3" class="border">Done</button>
+  </span><br>
+    <span style="display: flex" id="sp4"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e41">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e42">
+  <option value="A">A</option>
+  <option value="B">B</opti
+  	on>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev4">
+<button type="submit" id="eb4" class="border">Done</button>
+  </span><br>
+    <span style="display: flex" id="sp5"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e51">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e52">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</opti
+  	on>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev5">
+<button type="submit" id="eb5" class="border">Done</button>
+  </span><br>
+    <span style="display: flex" id="sp6"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e61">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e62">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev6">
+<button type="submit" class="border" id="eb6">Done</button>
+  </span><br>
+    <span style="display: flex" id="sp7"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e71">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e72">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev7">
+<button type="submit" id="eb7" class="border"> Done</button>
+  </span><br>
+    <span style="display: flex" id="sp8"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e81">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e82">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev8">
+<button type="submit" id="eb8" class="border">Done</button>
+  </span><br>
+    
+ <span style="display: flex" id="sp9"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e91">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e92">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev9">
+<button type="submit" id="eb9" class="border">Done</button>
+  </span><br>
+   <span style="display: flex" id="sp10"><p>Input the route distance(egde value)</p>
+ <select name="edge" id="e101">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select>
+ 
+ <select name="edge" id="e102">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><input type="number" id="ev10">
+<button type="submit" id="eb10" class="border">Done</button>
+  </span><br><br>
+</div></center>
+
+<div class="row">
+      <center><div class="col-sm-6" style="margin:20px 0px">
+        <div class="card tes1">
+          <h2>Urgent Delivery</h2><br>
+          <p>Using Dijkstra</p><p>Select the destination!</p>
+          <select name="resu" id="ress">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+</select><br>
+          <center><button class="border"><a style="color: white; font-family:'Rowdies', cursive; padding:10px 20px" id="result">Find short path</a></button></center>
+        </div>
+      </div></center>
+      <center><div class="col-sm-6" style="margin:20px 0px">
+        <div class="card tes2">
+          <h2>Overall Delivery</h2><br>
+          <p> BFS path</p><p>To traverse all places</p>
+          <br><br>
+          <center><button class="border"><a style="color: white; font-family:'Rowdies', cursive; padding:10px 20px" id="resultoo" >Traversal path</a></button></center>
+        </div>
+      </div></center>
+  </div>
+  <br><br>
+  <center><section class="show">
+    <center><h3>Results</h3></center>
+    <br><center><h5 id="path"></h5></center>
+    <br><center><h6 id="patho" style="text-shadow: 2px 2px 3px rgba(0,0,0,0.6);"></h6></center><br>
+    
+  </section></center><br><br>
+
+
+
+  <script type="text/javascript" src="algo.js"></script>
+  <script src="js/diji/Graph.js"></script>
+  <script src="js/diji/Test/Scripts/index.js"></script>
+
+</body>
+</html>

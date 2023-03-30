@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="index.css">
+      <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Rowdies&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet">
+	<title>success</title>
+</head>
+<body>
+      <center> <br><br><br><br><br><br><section class="titl"><br><br><h1> Your request accepted !!</h1><br>
+      	<h4>Your Bill amount:  Rs.<span id="billl"></span></h4><br>
+       <h4>we will reach you soon </h4><br></section></center>
+      <script type="text/javascript" >
+      document.getElementById("billl").innerHTML = localStorage.getItem("billmy");
+
+      </script> 
+</body>
+</html>
